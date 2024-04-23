@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9db1e6e-cb26-4552-9dc3-0c4b201caffa">
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT d.nama_dok, p.alamat, p.nama, r.no_daftar, r.id_pas, r.diagnosa FROM dokter d, pasien p, rekam r WHERE r.id_pas = p.id AND r.id_dok = d.id_dok;]]>
+	</queryString>
+	<field name="nama_dok" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_daftar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diagnosa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="nama_dok_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{nama_dok}]]></variableExpression>
+	</variable>
+	<group name="no_daftar">
+		<groupExpression><![CDATA[$F{no_daftar}]]></groupExpression>
+	</group>
+	<group name="id_pas">
+		<groupExpression><![CDATA[$F{id_pas}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="alamat">
+		<groupExpression><![CDATA[$F{alamat}]]></groupExpression>
+	</group>
+	<background>
+		<band height="802" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="55030421-3092-4498-917a-5f4458a3bd3c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORT REKAM MEDIS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="300" y="0" width="56" height="20" uuid="9411caf6-d1a8-4350-ad10-da70d6e1fb3e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="79" height="20" uuid="f2891e00-b1ac-42f6-8486-845149b75184"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="e3cb3527-925f-4b73-b038-c4a87d18c497"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No Daftar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="60" height="20" uuid="4244bbd6-4f83-49ce-a9b4-14b1299d80e3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Id Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="0" width="69" height="20" uuid="5c0bafb3-a076-426a-acd9-d58138104ba3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Diagnosa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="0" width="68" height="20" uuid="8ca454b5-dad5-4573-94c1-bbfea6748659"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Dokter]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="d5e85799-5023-40a8-83cc-af2d0f498557"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="79" height="20" uuid="9789e6c7-1614-4b91-86da-538c8214c617"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="83" height="20" uuid="5213fe36-1c38-437c-9f46-919336466ec6"/>
+				<textFieldExpression><![CDATA[$F{no_daftar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="83" height="20" uuid="c58f5675-1e8f-4a5a-86e8-ee93292f6d7b"/>
+				<textFieldExpression><![CDATA[$F{id_pas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="0" width="100" height="20" uuid="78f97e49-94f2-4cdf-a366-82ed02fce576"/>
+				<textFieldExpression><![CDATA[$F{diagnosa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="0" width="100" height="20" uuid="54995f4f-fb9b-4b26-8b01-af3860696b93"/>
+				<textFieldExpression><![CDATA[$F{nama_dok}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
